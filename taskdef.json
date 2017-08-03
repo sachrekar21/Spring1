@@ -1,5 +1,5 @@
 {
-    "family": "hello-world",
+    "family": "PetClinic",
     "containerDefinitions": [
         {
             "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test:config-server",
