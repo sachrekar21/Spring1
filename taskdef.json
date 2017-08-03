@@ -62,8 +62,8 @@
                 }]
         },
 		{
-            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test:discovery-server",
-            "name": "discovery-server",
+            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test:visits-service",
+            "name": "visits-service",
             "cpu": 1,
             "memory": 512,
             "essential": true,
