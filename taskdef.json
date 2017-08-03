@@ -48,6 +48,54 @@
                     "containerPort": 8083,
                     "hostPort": 8083
                 }]
+        },
+		{
+            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test:api-gateway",
+            "name": "api-gateway",
+            "cpu": 1,
+            "memory": 512,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 8080,
+                    "hostPort": 8080
+                }]
+        },
+		{
+            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test:discovery-server",
+            "name": "discovery-server",
+            "cpu": 1,
+            "memory": 512,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 8081,
+                    "hostPort": 8081
+                }]
+        },
+		{
+            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test:tracing-server",
+            "name": "tracing-server",
+            "cpu": 1,
+            "memory": 512,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 9411,
+                    "hostPort": 9411
+                }]
+        },
+		{
+            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test:admin-server",
+            "name": "admin-server",
+            "cpu": 1,
+            "memory": 512,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 9090,
+                    "hostPort": 9090
+                }]
         }		
     ]
 }
