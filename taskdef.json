@@ -69,8 +69,8 @@
             "essential": true,
             "portMappings": [
                 {
-                    "containerPort": 8081,
-                    "hostPort": 8081
+                    "containerPort": 8082,
+                    "hostPort": 8082
                 }]
         },
 		{
