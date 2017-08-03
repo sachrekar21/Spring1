@@ -12,7 +12,7 @@
                     "containerPort": 8888,
                     "hostPort": 8888
                 }
-        }
+        },
 		{
             "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test:discovery-server",
             "name": "discovery-server",
@@ -24,7 +24,7 @@
                     "containerPort": 8081,
                     "hostPort": 8081
                 }
-        }
+        },
 		{
             "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test:customers-service",
             "name": "customers-service",
@@ -36,7 +36,7 @@
                     "containerPort": 8888,
                     "hostPort": 8888
                 }
-        }
+        },
 		{
             "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test:vets-service",
             "name": "vets-service",
@@ -48,8 +48,6 @@
                     "containerPort": 8083,
                     "hostPort": 8083
                 }
-        }
-		
-		
+        }		
     ]
 }
