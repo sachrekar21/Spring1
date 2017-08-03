@@ -5,7 +5,7 @@
             "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test:config-server",
             "name": "config-server",
             "cpu": 1,
-            "memory": 1024,
+            "memory": 512,
             "essential": true,
             "portMappings": [
                 {
@@ -17,7 +17,7 @@
             "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test:discovery-server",
             "name": "discovery-server",
             "cpu": 1,
-            "memory": 1024,
+            "memory": 512,
             "essential": true,
             "portMappings": [
                 {
@@ -29,7 +29,7 @@
             "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test:customers-service",
             "name": "customers-service",
             "cpu": 1,
-            "memory": 1024,
+            "memory": 512,
             "essential": true,
             "portMappings": [
                 {
@@ -41,7 +41,7 @@
             "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test:vets-service",
             "name": "vets-service",
             "cpu": 1,
-            "memory": 1024,
+            "memory": 512,
             "essential": true,
             "portMappings": [
                 {
