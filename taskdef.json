@@ -2,7 +2,7 @@
     "family": "PetClinic",
     "containerDefinitions": [
         {
-            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/config-server",
+            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/config-server:latest",
             "name": "config-server",
             "cpu": 1,
             "memory": 2048,
@@ -14,12 +14,11 @@
                 }]
         },
 		{
-            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/discovery-server",
+            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/discovery-server:latest",
             "name": "discovery-server",
             "cpu": 1,
             "memory": 2048,
             "essential": true,
-            "entryPoint": ["./wait-for-it.sh","config-server:8888","--timeout=60","--","java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"],
             "portMappings": [
                 {
                     "containerPort": 8761,
@@ -27,12 +26,11 @@
                 }]
         },
 		{
-            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/customers-service",
+            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/customers-service:latest",
             "name": "customers-service",
             "cpu": 1,
             "memory": 2048,
             "essential": true,
-            "entryPoint": ["./wait-for-it.sh","discovery-server:8761","--timeout=60","--","java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"],
             "portMappings": [
                 {
                     "containerPort": 8081,
@@ -40,12 +38,11 @@
                 }]
         },
 		{
-            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/vets-service",
+            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/vets-service:latest",
             "name": "vets-service",
             "cpu": 1,
             "memory": 2048,
             "essential": true,
-            "entryPoint": ["./wait-for-it.sh","discovery-server:8761","--timeout=60","--","java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"],
             "portMappings": [
                 {
                     "containerPort": 8083,
@@ -53,12 +50,11 @@
                 }]
         },
 		{
-            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/api-gateway",
+            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/api-gateway:latest",
             "name": "api-gateway",
             "cpu": 1,
             "memory": 2048,
             "essential": true,
-            "entryPoint": ["./wait-for-it.sh","discovery-server:8761","--timeout=60","--","java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"],
             "portMappings": [
                 {
                     "containerPort": 8080,
@@ -66,12 +62,11 @@
                 }]
         },
 		{
-            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/visits-service",
+            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/visits-service:latest",
             "name": "visits-service",
             "cpu": 1,
             "memory": 2048,
             "essential": true,
-            "entryPoint": ["./wait-for-it.sh","discovery-server:8761","--timeout=60","--","java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"],
             "portMappings": [
                 {
                     "containerPort": 8082,
@@ -79,7 +74,7 @@
                 }]
         },
             		{
-            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/tracing-server",
+            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/tracing-server:latest",
             "name": "tracing-server",
             "cpu": 1,
             "memory": 2048,
@@ -91,7 +86,7 @@
                 }]
         },
 		{
-            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/admin-server",
+            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/admin-server:latest",
             "name": "admin-server",
             "cpu": 1,
             "memory": 2048,
