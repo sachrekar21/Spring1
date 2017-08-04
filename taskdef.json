@@ -19,6 +19,7 @@
             "cpu": 1,
             "memory": 512,
             "essential": true,
+            "entrypoint": ["./wait-for-it.sh","config-server:8888","--timeout=60","--","java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"],
             "portMappings": [
                 {
                     "containerPort": 8761,
@@ -31,6 +32,7 @@
             "cpu": 1,
             "memory": 512,
             "essential": true,
+            "entrypoint": ["./wait-for-it.sh","discovery-server:8761","--timeout=60","--","java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"],
             "portMappings": [
                 {
                     "containerPort": 8081,
@@ -43,6 +45,7 @@
             "cpu": 1,
             "memory": 512,
             "essential": true,
+            "entrypoint": ["./wait-for-it.sh","discovery-server:8761","--timeout=60","--","java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"],
             "portMappings": [
                 {
                     "containerPort": 8083,
@@ -55,6 +58,7 @@
             "cpu": 1,
             "memory": 512,
             "essential": true,
+            "entrypoint": ["./wait-for-it.sh","discovery-server:8761","--timeout=60","--","java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"],
             "portMappings": [
                 {
                     "containerPort": 8080,
@@ -67,6 +71,7 @@
             "cpu": 1,
             "memory": 512,
             "essential": true,
+            "entrypoint": ["./wait-for-it.sh","discovery-server:8761","--timeout=60","--","java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"],
             "portMappings": [
                 {
                     "containerPort": 8082,
@@ -79,6 +84,8 @@
             "cpu": 1,
             "memory": 512,
             "essential": true,
+            "entrypoint": ["./wait-for-it.sh","discovery-server:8761","--timeout=60","--","java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"],
+
             "portMappings": [
                 {
                     "containerPort": 9411,
@@ -91,6 +98,7 @@
             "cpu": 1,
             "memory": 512,
             "essential": true,
+            "entrypoint": ["./wait-for-it.sh","discovery-server:8761","--timeout=60","--","java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"],
             "portMappings": [
                 {
                     "containerPort": 9090,
