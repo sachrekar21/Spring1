@@ -2,7 +2,7 @@
     "family": "PetClinic",
     "containerDefinitions": [
         {
-            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test/config-server",
+            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/config-server",
             "name": "config-server",
             "cpu": 1,
             "memory": 512,
@@ -14,7 +14,7 @@
                 }]
         },
 		{
-            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test/discovery-server",
+            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/discovery-server",
             "name": "discovery-server",
             "cpu": 1,
             "memory": 512,
@@ -26,7 +26,7 @@
                 }]
         },
 		{
-            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test/customers-service",
+            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/customers-service",
             "name": "customers-service",
             "cpu": 1,
             "memory": 512,
@@ -38,7 +38,7 @@
                 }]
         },
 		{
-            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test/vets-service",
+            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/vets-service",
             "name": "vets-service",
             "cpu": 1,
             "memory": 512,
@@ -50,7 +50,7 @@
                 }]
         },
 		{
-            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test/api-gateway",
+            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/api-gateway",
             "name": "api-gateway",
             "cpu": 1,
             "memory": 512,
@@ -62,7 +62,7 @@
                 }]
         },
 		{
-            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test/visits-service",
+            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/visits-service",
             "name": "visits-service",
             "cpu": 1,
             "memory": 512,
@@ -74,7 +74,7 @@
                 }]
         },
 		{
-            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test/tracing-server",
+            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/tracing-server",
             "name": "tracing-server",
             "cpu": 1,
             "memory": 512,
@@ -86,7 +86,7 @@
                 }]
         },
 		{
-            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/shreyas-test/admin-server",
+            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/admin-server",
             "name": "admin-server",
             "cpu": 1,
             "memory": 512,
