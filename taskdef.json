@@ -82,7 +82,7 @@
             "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/tracing-server",
             "name": "tracing-server",
             "cpu": 1,
-            "memory": 512,
+            "memory": 2048,
             "essential": true,
             "portMappings": [
                 {
@@ -94,7 +94,7 @@
             "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/admin-server",
             "name": "admin-server",
             "cpu": 1,
-            "memory": 512,
+            "memory": 2048,
             "essential": true,
             "portMappings": [
                 {
