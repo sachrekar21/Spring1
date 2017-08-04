@@ -5,7 +5,7 @@
             "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/config-server",
             "name": "config-server",
             "cpu": 1,
-            "memory": 1024,
+            "memory": 2048,
             "essential": true,
             "portMappings": [
                 {
@@ -17,7 +17,7 @@
             "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/discovery-server",
             "name": "discovery-server",
             "cpu": 1,
-            "memory": 1024,
+            "memory": 2048,
             "essential": true,
             "entryPoint": ["./wait-for-it.sh","config-server:8888","--timeout=60","--","java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"],
             "portMappings": [
@@ -30,7 +30,7 @@
             "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/customers-service",
             "name": "customers-service",
             "cpu": 1,
-            "memory": 1024,
+            "memory": 2048,
             "essential": true,
             "entryPoint": ["./wait-for-it.sh","discovery-server:8761","--timeout=60","--","java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"],
             "portMappings": [
@@ -43,7 +43,7 @@
             "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/vets-service",
             "name": "vets-service",
             "cpu": 1,
-            "memory": 1024,
+            "memory": 2048,
             "essential": true,
             "entryPoint": ["./wait-for-it.sh","discovery-server:8761","--timeout=60","--","java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"],
             "portMappings": [
@@ -56,7 +56,7 @@
             "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/api-gateway",
             "name": "api-gateway",
             "cpu": 1,
-            "memory": 1024,
+            "memory": 2048,
             "essential": true,
             "entryPoint": ["./wait-for-it.sh","discovery-server:8761","--timeout=60","--","java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"],
             "portMappings": [
