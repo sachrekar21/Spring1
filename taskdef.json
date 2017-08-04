@@ -77,33 +77,6 @@
                     "containerPort": 8082,
                     "hostPort": 8082
                 }]
-        },
-            {
-            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/tracing-server",
-            "name": "tracing-server",
-            "cpu": 1,
-            "memory": 512,
-            "essential": true,
-            "entryPoint": ["./wait-for-it.sh","discovery-server:8761","--timeout=60","--","java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"],
-
-            "portMappings": [
-                {
-                    "containerPort": 9411,
-                    "hostPort": 9411
-                }]
-        },
-		{
-            "image": "293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/admin-server",
-            "name": "admin-server",
-            "cpu": 1,
-            "memory": 512,
-            "essential": true,
-            "entryPoint": ["./wait-for-it.sh","discovery-server:8761","--timeout=60","--","java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"],
-            "portMappings": [
-                {
-                    "containerPort": 9090,
-                    "hostPort": 9090
-                }]
         }
     ]
 }
