@@ -1,13 +1,18 @@
 version: '2'
 services:
   config-server:
-    image: mszarlinski/spring-petclinic-config-server
+    image: 293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/config-server
+    cpu_shares: 256
+    mem_limit: 2000000000
     container_name: config-server
     ports:
      - 8888:8888
 
+
   discovery-server:
-    image: mszarlinski/spring-petclinic-discovery-server
+    image: 293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/discovery-server
+    cpu_shares: 256
+    mem_limit: 2000000000
     container_name: discovery-server
     links:
      - config-server
@@ -18,7 +23,9 @@ services:
      - 8761:8761
 
   customers-service:
-    image: mszarlinski/spring-petclinic-customers-service
+    image: 293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/customers-service
+    cpu_shares: 256
+    mem_limit: 2000000000
     container_name: customers-service
     links:
      - config-server
@@ -32,7 +39,9 @@ services:
     - 8081:8081
 
   visits-service:
-    image: mszarlinski/spring-petclinic-visits-service
+    image: 293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/visits-service
+    cpu_shares: 256
+    mem_limit: 2000000000
     container_name: visits-service
     links:
      - config-server
@@ -46,7 +55,9 @@ services:
      - 8082:8082
 
   vets-service:
-    image: mszarlinski/spring-petclinic-vets-service
+    image: 293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/vets-service
+    cpu_shares: 256
+    mem_limit: 2000000000
     container_name: vets-service
     links:
      - config-server
@@ -60,7 +71,9 @@ services:
      - 8083:8083
 
   api-gateway:
-    image: mszarlinski/spring-petclinic-api-gateway
+    image: 293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/api-gateway
+    cpu_shares: 256
+    mem_limit: 2000000000
     container_name: api-gateway
     links:
      - config-server
@@ -75,8 +88,11 @@ services:
     entrypoint: ["./wait-for-it.sh","discovery-server:8761","--timeout=60","--","java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
     ports:
      - 8080:8080
-     tracing-server:
-    image: mszarlinski/spring-petclinic-tracing-server
+
+  tracing-server:
+    image: 293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/tracing-server
+    cpu_shares: 256
+    mem_limit: 2000000000
     container_name: tracing-server
     links:
      - config-server
@@ -89,7 +105,9 @@ services:
      - 9411:9411
 
   admin-server:
-    image: mszarlinski/spring-petclinic-admin-server
+    image: 293329462814.dkr.ecr.us-east-1.amazonaws.com/petclinic/admin-server
+    cpu_shares: 256
+    mem_limit: 2000000000
     container_name: admin-server
     links:
      - config-server
